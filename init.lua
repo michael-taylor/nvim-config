@@ -65,3 +65,6 @@ require("tokyonight").setup({
 	end,
 })
 vim.cmd[[colorscheme tokyonight-moon]]
+
+-- Setup devicons
+require('nvim-web-devicons').setup()
