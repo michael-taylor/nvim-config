@@ -13,3 +13,6 @@
 [submodule "pack/plugins/start/plenary.nvim"]
 	path = pack/plugins/start/plenary.nvim
 	url = git@github.com:nvim-lua/plenary.nvim.git
+[submodule "pack/plugins/start/editorconfig-vim"]
+	path = pack/plugins/start/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim.git
