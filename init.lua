@@ -137,7 +137,7 @@ require('indent_blankline').setup({
 	char = '▏',
 	show_trailing_blankline_indent = false,
 	show_first_indent_level = false,
-	use_treesitter = false,
+	use_treesitter = true,
 	show_current_context = false
 })
 
@@ -145,7 +145,18 @@ require('indent_blankline').setup({
 require('Comment').setup()
 
 -- Setup nvim-tree
-require('nvim-tree').setup()
+require('nvim-tree').setup({
+	on_attach = function(bufnr)
+		-- According to nvim-tree docs, this is the best place to set nvim-tree keybindings
+		local bufmap = function(lhs, rhs, desc)
+			vim.keymap.set('n', lhs, rhs, { buffer = bufnr, desc = desc })
+		end
+
+		local api = require('nvim-tree.api')
+
+		bufmap('gh', api.tree.toggle_hidden_filter, 'Toggle hidden files')
+	end
+})
 
 -- Copy libfzf to correct location
 utils.copy_file('libfzf.dll',  -- TODO: Need to support libfzf.so on non-Windows platforms
