@@ -84,5 +84,8 @@ require('indent_blankline').setup({
 -- Setup Comment
 require('Comment').setup()
 
+-- Setup nvim-tree
+require('nvim-tree').setup()
+
 -- Setup our keymap
 require('keymap')

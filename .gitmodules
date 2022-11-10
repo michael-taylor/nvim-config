@@ -19,3 +19,6 @@
 [submodule "pack/plugins/start/Comment.nvim"]
 	path = pack/plugins/start/Comment.nvim
 	url = git@github.com:numToStr/Comment.nvim.git
+[submodule "pack/plugins/start/nvim-tree.lua"]
+	path = pack/plugins/start/nvim-tree.lua
+	url = git@github.com:nvim-tree/nvim-tree.lua.git
