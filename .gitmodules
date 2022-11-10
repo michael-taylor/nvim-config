@@ -1,30 +1,40 @@
 [submodule "pack/plugins/start/tokyonight.nvim"]
 	path = pack/plugins/start/tokyonight.nvim
 	url = https://github.com/folke/tokyonight.nvim.git
+	shallow = true
 [submodule "pack/plugins/start/nvim-web-devicons"]
 	path = pack/plugins/start/nvim-web-devicons
 	url = https://github.com/nvim-tree/nvim-web-devicons.git
+	shallow = true
 [submodule "pack/plugins/start/lualine.nvim"]
 	path = pack/plugins/start/lualine.nvim
 	url = https://github.com/nvim-lualine/lualine.nvim.git
+	shallow = true
 [submodule "pack/plugins/start/indent-blankline.nvim"]
 	path = pack/plugins/start/indent-blankline.nvim
 	url = https://github.com/lukas-reineke/indent-blankline.nvim.git
+	shallow = true
 [submodule "pack/plugins/start/plenary.nvim"]
 	path = pack/plugins/start/plenary.nvim
 	url = https://github.com/nvim-lua/plenary.nvim.git
+	shallow = true
 [submodule "pack/plugins/start/editorconfig-vim"]
 	path = pack/plugins/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+	shallow = true
 [submodule "pack/plugins/start/Comment.nvim"]
 	path = pack/plugins/start/Comment.nvim
 	url = https://github.com/numToStr/Comment.nvim.git
+	shallow = true
 [submodule "pack/plugins/start/nvim-tree.lua"]
 	path = pack/plugins/start/nvim-tree.lua
 	url = https://github.com/nvim-tree/nvim-tree.lua.git
+	shallow = true
 [submodule "pack/plugins/start/telescope.nvim"]
 	path = pack/plugins/start/telescope.nvim
 	url = https://github.com/nvim-telescope/telescope.nvim.git
+	shallow = true
 [submodule "pack/plugins/start/telescope-fzf-native.nvim"]
 	path = pack/plugins/start/telescope-fzf-native.nvim
 	url = https://github.com/nvim-telescope/telescope-fzf-native.nvim.git
+	shallow = true
