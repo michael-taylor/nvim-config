@@ -1,4 +1,5 @@
 local t_builtin = require('telescope.builtin')
+local wk = require('which-key')
 local map = vim.keymap.set
 local noremap = { noremap = true, silent = true }
 
@@ -8,8 +9,19 @@ vim.g.mapleader = ' '
 -- Use 'jk' instead of ESC in insert mode
 map('i', 'jk', '<ESC>', noremap)
 
--- Setup Telescope bindings
-map('n', '<leader>ff', t_builtin.find_files, {})
-map('n', '<leader>fg', t_builtin.live_grep, {})
-map('n', '<leader>fb', t_builtin.buffers, {})
-map('n', '<leader>fh', t_builtin.help_tags, {})
+wk.register({
+	f = {
+		name = 'Files',
+		f = { t_builtin.find_files, 'Find Files' },
+		r = { t_builtin.oldfiles, 'Open Recent Files' },
+		t = { '<cmd>NvimTreeToggle<cr>', 'Toggle NvimTree' },
+		g = { t_builtin.live_grep, 'Live Grep' },
+
+	},
+	b = {
+		name = 'Buffers',
+		b = { t_builtin.buffers, 'List Open Buffers' },
+		s = { t_builtin.current_buffer_fuzzy_find, 'Search in Buffer' },
+	},
+	h = { t_builtin.help_tags, 'Help Search' },
+}, { prefix = '<leader>' })
