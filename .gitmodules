@@ -1,30 +1,30 @@
 [submodule "pack/plugins/start/tokyonight.nvim"]
 	path = pack/plugins/start/tokyonight.nvim
-	url = git@github.com:folke/tokyonight.nvim.git
+	url = https://github.com/folke/tokyonight.nvim.git
 [submodule "pack/plugins/start/nvim-web-devicons"]
 	path = pack/plugins/start/nvim-web-devicons
-	url = git@github.com:nvim-tree/nvim-web-devicons.git
+	url = https://github.com/nvim-tree/nvim-web-devicons.git
 [submodule "pack/plugins/start/lualine.nvim"]
 	path = pack/plugins/start/lualine.nvim
-	url = git@github.com:nvim-lualine/lualine.nvim.git
+	url = https://github.com/nvim-lualine/lualine.nvim.git
 [submodule "pack/plugins/start/indent-blankline.nvim"]
 	path = pack/plugins/start/indent-blankline.nvim
-	url = git@github.com:lukas-reineke/indent-blankline.nvim.git
+	url = https://github.com/lukas-reineke/indent-blankline.nvim.git
 [submodule "pack/plugins/start/plenary.nvim"]
 	path = pack/plugins/start/plenary.nvim
-	url = git@github.com:nvim-lua/plenary.nvim.git
+	url = https://github.com/nvim-lua/plenary.nvim.git
 [submodule "pack/plugins/start/editorconfig-vim"]
 	path = pack/plugins/start/editorconfig-vim
-	url = git@github.com:editorconfig/editorconfig-vim.git
+	url = https://github.com/editorconfig/editorconfig-vim.git
 [submodule "pack/plugins/start/Comment.nvim"]
 	path = pack/plugins/start/Comment.nvim
-	url = git@github.com:numToStr/Comment.nvim.git
+	url = https://github.com/numToStr/Comment.nvim.git
 [submodule "pack/plugins/start/nvim-tree.lua"]
 	path = pack/plugins/start/nvim-tree.lua
-	url = git@github.com:nvim-tree/nvim-tree.lua.git
+	url = https://github.com/nvim-tree/nvim-tree.lua.git
 [submodule "pack/plugins/start/telescope.nvim"]
 	path = pack/plugins/start/telescope.nvim
-	url = git@github.com:nvim-telescope/telescope.nvim.git
+	url = https://github.com/nvim-telescope/telescope.nvim.git
 [submodule "pack/plugins/start/telescope-fzf-native.nvim"]
 	path = pack/plugins/start/telescope-fzf-native.nvim
-	url = git@github.com:nvim-telescope/telescope-fzf-native.nvim.git
+	url = https://github.com/nvim-telescope/telescope-fzf-native.nvim.git
