@@ -68,3 +68,6 @@ vim.cmd[[colorscheme tokyonight-moon]]
 
 -- Setup devicons
 require('nvim-web-devicons').setup()
+
+-- Setup lualine
+require('lualine').setup()
