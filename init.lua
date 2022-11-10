@@ -3,6 +3,7 @@
 --   * Nerd Fonts distribution of Hack font (included)
 --   * RipGrep should be in PATH (included)
 --   * fd should be in PATH (included)
+--   * tree-sitter should be in PATH (included)
 
 local utils = require('utils')
 
@@ -72,6 +73,38 @@ vim.cmd[[colorscheme tokyonight-moon]]
 
 -- Setup devicons
 require('nvim-web-devicons').setup()
+
+-- Setup treesitter
+local treesitter_langs = {
+	'bash',
+	'c',
+	'c_sharp',
+	'comment',
+	'cpp',
+	'dart',
+	'gitignore',
+	'json',
+	'lua',
+	'make',
+	'markdown',
+	'python',
+	'sql',
+	'toml',
+	'vim',
+	'yaml'
+}
+-- Copy the pre-compiled parsers to nvim-treesitter package
+for _, parser in ipairs(treesitter_langs) do
+	utils.copy_file(parser..'.so',
+	                vim.fn.stdpath('config')..'/prerequisites/treesitter-parsers',
+	                vim.fn.stdpath('config')..'/pack/plugins/start/nvim-treesitter/parser')
+end
+require('nvim-treesitter.configs').setup({
+	highlight = {
+		enable = true,
+	},
+	ensure_installed = treesitter_langs,
+})
 
 -- Setup lualine
 require('lualine').setup()
