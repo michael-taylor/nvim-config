@@ -1,10 +1,14 @@
 -- Prerequisites:
 --   * NeoVim 0.8.0+
+--   * Nerd Fonts distribution of Hack font (included)
 
 -- On Windows, start by importing Windows compatibility config
 if jit.os == 'Windows' then
 	vim.cmd('source $VIMRUNTIME/mswin.vim')
 end
+
+-- Set font
+vim.opt.guifont = 'Hack NF:h10'
 
 -- Set default encoding
 vim.opt.encoding = 'UTF-8'
