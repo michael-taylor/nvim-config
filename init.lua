@@ -37,7 +37,7 @@ vim.opt.relativenumber = true
 vim.opt.cursorline = true
 
 -- Set timeout for which-key
-vim.opt.timeoutlen = 200
+vim.opt.timeoutlen = 500
 
 -- Set scroll context
 vim.opt.scrolloff = 10
@@ -45,9 +45,6 @@ vim.opt.scrolloff = 10
 -- Ignore case when searching
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
--- Set space as leader key
-vim.g.mapleader = ' '
 
 -- Setup colorscheme
 require("tokyonight").setup({
@@ -83,3 +80,9 @@ require('indent_blankline').setup({
 	use_treesitter = false,
 	show_current_context = false
 })
+
+-- Setup Comment
+require('Comment').setup()
+
+-- Setup our keymap
+require('keymap')
