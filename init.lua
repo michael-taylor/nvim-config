@@ -1,6 +1,8 @@
 -- Prerequisites:
 --   * NeoVim 0.8.0+
 --   * Nerd Fonts distribution of Hack font (included)
+--   * RipGrep should be in PATH (included)
+--   * fd should be in PATH (included)
 
 local utils = require('utils')
 
@@ -101,7 +103,7 @@ require('telescope').setup {
 			fuzzy = true,
 			override_generic_sorter = true,
 			override_file_sorter = true,
-			case_mode = "smart_case",
+			case_mode = 'smart_case',
 		}
 	}
 }
