@@ -87,5 +87,28 @@ require('Comment').setup()
 -- Setup nvim-tree
 require('nvim-tree').setup()
 
+-- Copy libfzf to correct location
+-- TODO: make this non-Windows compatible
+local src_file = vim.fn.stdpath('config')..'\\prerequisites\\libfzf_native\\libfzf.dll'
+local dest_dir = vim.fn.stdpath('config')..'\\pack\\plugins\\start\\telescope-fzf-native.nvim\\build'
+if vim.fn.empty(vim.fn.glob(dest_dir)) > 0 then
+	print('Copying fzf library to plugin dir...')
+	vim.api.nvim_command('!mkdir '..dest_dir)
+	vim.api.nvim_command('!copy '..src_file..' '..dest_dir)
+end
+
+-- Setup telescope
+require('telescope').setup {
+	extensions = {
+		fzf = {
+			fuzzy = true,
+			override_generic_sorter = true,
+			override_file_sorter = true,
+			case_mode = "smart_case",
+		}
+	}
+}
+require('telescope').load_extension('fzf')
+
 -- Setup our keymap
 require('keymap')
