@@ -42,3 +42,6 @@
 	path = .\\pack\\plugins\\start\\nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter.git
 	shallow = true
+[submodule ".\\pack\\plugins\\start\\nvim-treesitter-textobjects"]
+	path = .\\pack\\plugins\\start\\nvim-treesitter-textobjects
+	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects.git
