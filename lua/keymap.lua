@@ -24,4 +24,11 @@ wk.register({
 		s = { t_builtin.current_buffer_fuzzy_find, 'Search in Buffer' },
 	},
 	h = { t_builtin.help_tags, 'Help Search' },
+	s = {
+		name = 'Sessions',
+		s = { '<cmd>SaveSession<cr>', 'Save Session' },
+		r = { '<cmd>RestoreSession<cr>', 'Restore Session' },
+		d = { '<cmd>Autosession delete<cr>', 'Delete Session' },
+		l = { '<cmd>Autosession search<cr>', 'List Sessions' },
+	}
 }, { prefix = '<leader>' })
