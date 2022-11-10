@@ -2,6 +2,8 @@
 --   * NeoVim 0.8.0+
 --   * Nerd Fonts distribution of Hack font (included)
 
+local utils = require('utils')
+
 -- On Windows, start by importing Windows compatibility config
 if jit.os == 'Windows' then
 	vim.cmd('source $VIMRUNTIME/mswin.vim')
@@ -88,14 +90,9 @@ require('Comment').setup()
 require('nvim-tree').setup()
 
 -- Copy libfzf to correct location
--- TODO: make this non-Windows compatible
-local src_file = vim.fn.stdpath('config')..'\\prerequisites\\libfzf_native\\libfzf.dll'
-local dest_dir = vim.fn.stdpath('config')..'\\pack\\plugins\\start\\telescope-fzf-native.nvim\\build'
-if vim.fn.empty(vim.fn.glob(dest_dir)) > 0 then
-	print('Copying fzf library to plugin dir...')
-	vim.api.nvim_command('!mkdir '..dest_dir)
-	vim.api.nvim_command('!copy '..src_file..' '..dest_dir)
-end
+utils.copy_file('libfzf.dll',  -- TODO: Need to support libfzf.so on non-Windows platforms
+                vim.fn.stdpath('config')..'/prerequisites/libfzf_native',
+                vim.fn.stdpath('config')..'/pack/plugins/start/telescope-fzf-native.nvim/build')
 
 -- Setup telescope
 require('telescope').setup {
