@@ -74,6 +74,9 @@ vim.cmd[[colorscheme tokyonight-moon]]
 -- Setup devicons
 require('nvim-web-devicons').setup()
 
+-- Setup alpha-nvim
+require('alpha').setup(require('dashboard').config)
+
 -- Setup treesitter
 local treesitter_langs = {
 	'bash',
@@ -193,6 +196,8 @@ require('telescope').load_extension('fzf')
 -- Setup auto-session
 require("auto-session").setup {
 	log_level = "error",
+	auto_save_enabled = false,
+	auto_restore_enabled = false,
 
 	cwd_change_handling = {
 		post_cwd_changed_hook = function()

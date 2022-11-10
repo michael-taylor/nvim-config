@@ -54,3 +54,7 @@
 	path = .\\pack\\plugins\\start\\auto-session
 	url = https://github.com/rmagatti/auto-session.git
 	shallow = true
+[submodule ".\\pack\\plugins\\start\\alpha-nvim"]
+	path = .\\pack\\plugins\\start\\alpha-nvim
+	url = https://github.com/goolord/alpha-nvim.git
+	shallow = true
