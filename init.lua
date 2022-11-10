@@ -34,6 +34,7 @@ vim.opt.list = true
 -- Set line numbering
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.cursorline = true
 
 -- Set timeout for which-key
 vim.opt.timeoutlen = 200
@@ -47,3 +48,20 @@ vim.opt.smartcase = true
 
 -- Set space as leader key
 vim.g.mapleader = ' '
+
+-- Setup colorscheme
+require("tokyonight").setup({
+	-- Use the moon style
+	style = "moon",
+	
+	-- Make the line numbers more visible
+	on_colors = function(colors)
+		colors.fg_gutter = "#707cb2"
+	end,
+	on_highlights = function(hl, colors)
+		hl.CursorLineNr = {
+			fg = colors.orange
+		}
+	end,
+})
+vim.cmd[[colorscheme tokyonight-moon]]
