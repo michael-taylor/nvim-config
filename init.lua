@@ -62,6 +62,9 @@ require("tokyonight").setup({
 		hl.CursorLineNr = {
 			fg = colors.orange
 		}
+		hl.Whitespace = {
+			fg = colors.bg_highlight
+		}
 	end,
 })
 vim.cmd[[colorscheme tokyonight-moon]]
@@ -71,3 +74,12 @@ require('nvim-web-devicons').setup()
 
 -- Setup lualine
 require('lualine').setup()
+
+-- Setup indent-blankline
+require('indent_blankline').setup({
+	char = '▏',
+	show_trailing_blankline_indent = false,
+	show_first_indent_level = false,
+	use_treesitter = false,
+	show_current_context = false
+})
