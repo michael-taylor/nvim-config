@@ -81,23 +81,34 @@ local treesitter_langs = {
 	'c_sharp',
 	'comment',
 	'cpp',
+	'css',
 	'dart',
 	'gitignore',
+	'help',
+	'html',
+	'java',
+	'javascript',
 	'json',
+	'kotlin',
 	'lua',
 	'make',
 	'markdown',
 	'python',
 	'sql',
 	'toml',
+	'tsx',
+	'typescript',
 	'vim',
 	'yaml'
 }
 -- Copy the pre-compiled parsers to nvim-treesitter package
 for _, parser in ipairs(treesitter_langs) do
 	utils.copy_file(parser..'.so',
-	                vim.fn.stdpath('config')..'/prerequisites/treesitter-parsers',
+	                vim.fn.stdpath('config')..'/prerequisites/treesitter-parsers/parser',
 	                vim.fn.stdpath('config')..'/pack/plugins/start/nvim-treesitter/parser')
+	utils.copy_file(parser..'.revision',
+	                vim.fn.stdpath('config')..'/prerequisites/treesitter-parsers/parser-info',
+	                vim.fn.stdpath('config')..'/pack/plugins/start/nvim-treesitter/parser-info')
 end
 require('nvim-treesitter.configs').setup({
 	highlight = {
