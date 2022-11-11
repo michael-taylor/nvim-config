@@ -1,14 +1,18 @@
 -- Prerequisites:
 --   * NeoVim 0.8.0+
 --   * Nerd Fonts distribution of Hack font (included)
---   * RipGrep should be in PATH (included)
---   * fd should be in PATH (included)
+--   * RipGrep should be in PATH (included for Windows, ripgrep package on Linux)
+--   * fd should be in PATH (included for Windows, fd-find package on Linux)
 --   * tree-sitter should be in PATH (included)
 
 local utils = require('utils')
 
 -- On Windows, start by importing Windows compatibility config
+local os_name = 'linux'
+local lib_sfx = '.so'
 if jit.os == 'Windows' then
+	os_name = 'windows'
+	lib_sfx = '.dll'
 	vim.cmd('source $VIMRUNTIME/mswin.vim')
 end
 
@@ -107,10 +111,10 @@ local treesitter_langs = {
 -- Copy the pre-compiled parsers to nvim-treesitter package
 for _, parser in ipairs(treesitter_langs) do
 	utils.copy_file(parser..'.so',
-	                vim.fn.stdpath('config')..'/prerequisites/treesitter-parsers/parser',
+	                vim.fn.stdpath('config')..'/prerequisites/treesitter-parsers/' .. os_name .. '/parser',
 	                vim.fn.stdpath('config')..'/pack/plugins/start/nvim-treesitter/parser')
 	utils.copy_file(parser..'.revision',
-	                vim.fn.stdpath('config')..'/prerequisites/treesitter-parsers/parser-info',
+	                vim.fn.stdpath('config')..'/prerequisites/treesitter-parsers/' .. os_name .. '/parser-info',
 	                vim.fn.stdpath('config')..'/pack/plugins/start/nvim-treesitter/parser-info')
 end
 require('nvim-treesitter.configs').setup({
@@ -170,7 +174,7 @@ require('nvim-tree').setup({
 })
 
 -- Copy libfzf to correct location
-utils.copy_file('libfzf.dll',  -- TODO: Need to support libfzf.so on non-Windows platforms
+utils.copy_file('libfzf' .. lib_sfx,
                 vim.fn.stdpath('config')..'/prerequisites/libfzf_native',
                 vim.fn.stdpath('config')..'/pack/plugins/start/telescope-fzf-native.nvim/build')
 
