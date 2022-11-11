@@ -38,23 +38,23 @@
 	path = pack/plugins/start/telescope-fzf-native.nvim
 	url = https://github.com/nvim-telescope/telescope-fzf-native.nvim.git
 	shallow = true
-[submodule ".\\pack\\plugins\\start\\nvim-treesitter"]
-	path = .\\pack\\plugins\\start\\nvim-treesitter
+[submodule "pack/plugins/start/nvim-treesitter"]
+	path = pack/plugins/start/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter.git
 	shallow = true
-[submodule ".\\pack\\plugins\\start\\nvim-treesitter-textobjects"]
-	path = .\\pack\\plugins\\start\\nvim-treesitter-textobjects
+[submodule "pack/plugins/start/nvim-treesitter-textobjects"]
+	path = pack/plugins/start/nvim-treesitter-textobjects
 	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects.git
 	shallow = true
-[submodule ".\\pack\\plugins\\start\\which-key.nvim"]
-	path = .\\pack\\plugins\\start\\which-key.nvim
+[submodule "pack/plugins/start/which-key.nvim"]
+	path = pack/plugins/start/which-key.nvim
 	url = https://github.com/folke/which-key.nvim.git
 	shallow = true
-[submodule ".\\pack\\plugins\\start\\auto-session"]
-	path = .\\pack\\plugins\\start\\auto-session
+[submodule "pack/plugins/start/auto-session"]
+	path = pack/plugins/start/auto-session
 	url = https://github.com/rmagatti/auto-session.git
 	shallow = true
-[submodule ".\\pack\\plugins\\start\\alpha-nvim"]
-	path = .\\pack\\plugins\\start\\alpha-nvim
+[submodule "pack/plugins/start/alpha-nvim"]
+	path = pack/plugins/start/alpha-nvim
 	url = https://github.com/goolord/alpha-nvim.git
 	shallow = true
