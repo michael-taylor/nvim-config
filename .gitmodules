@@ -58,3 +58,7 @@
 	path = pack/plugins/start/alpha-nvim
 	url = https://github.com/goolord/alpha-nvim.git
 	shallow = true
+[submodule "pack/plugins/start/lightspeed.nvim"]
+	path = pack/plugins/start/lightspeed.nvim
+	url = https://github.com/ggandor/lightspeed.nvim.git
+	shallow = true

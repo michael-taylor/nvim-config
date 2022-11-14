@@ -214,5 +214,10 @@ require("auto-session").setup {
 	},
 }
 
+-- Setup lightspeed
+require('lightspeed').setup({
+	ignore_case = true,
+})
+
 -- Setup our keymap
 require('keymap')
