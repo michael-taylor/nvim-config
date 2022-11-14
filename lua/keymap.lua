@@ -10,6 +10,8 @@ vim.g.mapleader = ' '
 map('i', 'jk', '<ESC>', noremap)
 
 wk.register({
+	w = { '<cmd>:w<cr>', 'Write File' },
+	q = { '<cmd>:q<cr>', 'Quit NeoVim' },
 	f = {
 		name = 'Files',
 		f = { t_builtin.find_files, 'Find Files' },
