@@ -17,6 +17,7 @@ if jit.os == 'Windows' then
 end
 
 -- Set font
+-- NOTE: In Linux, this will need to be set in the terminal config
 vim.opt.guifont = 'Hack NF:h10'
 
 -- Set default encoding
@@ -62,7 +63,7 @@ require("tokyonight").setup({
 	
 	-- Make the line numbers more visible
 	on_colors = function(colors)
-		colors.fg_gutter = "#707cb2"
+		colors.fg_gutter = '#707cb2'
 	end,
 	on_highlights = function(hl, colors)
 		hl.CursorLineNr = {
@@ -186,7 +187,7 @@ require('telescope').setup {
 				-- map actions.which_key to <C-h> (default: <C-/>)
 				-- actions.which_key shows the mappings for your picker,
 				-- e.g. git_{create, delete, ...}_branch for the git_branches picker
-				["<C-h>"] = "which_key"
+				['<C-h>'] = 'which_key'
 			}
 		}
 	},
@@ -202,14 +203,14 @@ require('telescope').setup {
 require('telescope').load_extension('fzf')
 
 -- Setup auto-session
-require("auto-session").setup {
-	log_level = "error",
+require('auto-session').setup {
+	log_level = 'error',
 	auto_save_enabled = false,
 	auto_restore_enabled = false,
 
 	cwd_change_handling = {
 		post_cwd_changed_hook = function()
-			require("lualine").refresh() -- refresh lualine so the new session name is displayed in the status bar
+			require('lualine').refresh() -- refresh lualine so the new session name is displayed in the status bar
 		end,
 	},
 }
