@@ -28,6 +28,7 @@ require("lazy").setup({
   },
   install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
+  concurrency = 8, -- The default value (cores * 2) overwhelms company security software
   performance = {
     rtp = {
       -- disable some rtp plugins
